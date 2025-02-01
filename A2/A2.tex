@@ -1,0 +1,330 @@
+\documentclass[12pt,emtex]{article}
+\pagestyle{plain}
+\usepackage{amssymb,amsthm,latexsym}
+\usepackage{xcolor}
+\usepackage{times}
+\usepackage[reqno]{amsmath}
+\usepackage[mathscr]{eucal}
+\usepackage{graphics}
+\usepackage{multicol}
+\usepackage{pifont}
+\usepackage{calc}
+\usepackage{epsfig}
+\psfigdriver{dvips}
+
+\setlength{\topmargin}{-0.5in}
+\setlength{\oddsidemargin}{-0.0in}
+\setlength{\textheight}{9in}
+\setlength{\textwidth}{6.5in}
+
+\begin{document}
+\title{\vspace{-25mm} \bf Cryptography 
+\\ Assignment 2}
+\date{}
+\maketitle
+
+\vspace{-20mm}
+
+\begin{center}
+	{\bf Dr. Charlie Obimbo \hfill Due:  February 11th, 2025}
+\end{center}
+
+\hrule
+
+\vspace{6mm}
+
+\
+
+\noindent
+{\bf Name: $\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_$ \hspace{20mm} \hfill 
+    To be done  in \LaTeX
+}
+
+\hfill Assignment is out of 10
+
+
+
+	
+\section{One-Time Pad}
+
+
+Recall that in class we demonstrated how using the One-time pad was secure. In effect we showed how, in an effort to try and decrypt the cipher-text:
+
+\medskip
+
+``\texttt{ANKYODKYUREPFJBYOJDSPLREYIUNOFDOIUERFPLUYTS}"
+
+\
+
+\noindent
+One cryptanalyst came up with the decryption:
+``\texttt{MR MUSTARD WITH THE CANDLESTICK IN THE HALL}"; 
+\
+while another: 
+``\texttt{MISS SCARLET WITH THE KNIFE IN THE LIBRARY}.
+
+\begin{enumerate}
+ \item Demonstrate how, using the character as the atomic operand, given the cipher-text:
+ 
+\texttt{JACAOYOABLCYOUPOYTBN}
+ 
+ One may get:
+ 
+ 
+\begin{enumerate}
+\item \texttt{COMMANDER IN CHIEF} 	 \hfill [1 mark]
+
+\bigskip
+
+\vspace{8mm}
+
+\hrule \vspace{8mm}   \hrule \vspace{8mm}    
+\hrule \vspace{8mm}   \hrule \vspace{8mm}   \hrule 
+\
+
+\item \texttt{THE SERGEANT AT ARMS}		\hfill [1 mark]
+
+\vspace{12mm}
+
+\hrule \vspace{8mm}   \hrule \vspace{8mm}    
+\hrule \vspace{8mm}   \hrule \vspace{8mm}   \hrule 
+
+
+
+\end{enumerate}
+
+\newpage
+
+\
+
+\vspace{-20mm}
+
+\item Joseph sends Aisha a message using a One-time pad. He also sends David another message using the same key. You were able to get both messages, as:
+
+
+\texttt{0809 0302 0607 1A17 1A08 1C07 141D}
+	and
+	 	 \hfill [2 marks]
+	
+\texttt{0005 1311 1911 1907 0D09 1B08 130B}
+
+ 
+  If the atomic operand is the bit, decrypt both messages and find the potential key.
+
+Consider that one of the phrases may be from the following list: 
+
+\
+
+{\footnotesize \begin{center}
+\begin{tabular}{|c|c|}  \hline
+\ \ \ \ \ GORGEOUS SUSAN \ \ \ \ \ 
+&
+SHE ADORES JOHN
+\\ \hline
+NICOTINE IS BAD
+&
+MARIJUANAS LEGAL
+\\ \hline
+JUSTINE TRUDEAU
+&
+\ \ \ \ \ FLOYD MAYWEATHER \ \ \ \ \ 
+\\ \hline
+ANGELINA JOLIE
+&
+EMBEZZLED FUNDS \\ \hline
+NANETTE WORKMAN
+&
+ELIZABETH MAY
+\\ \hline
+GRANT US PEACE
+&
+WE'RE AWESOME \\  \hline
+\end{tabular}
+\end{center}
+}
+
+
+\
+
+
+\
+
+\hrule \vspace{8mm}   \hrule \vspace{8mm}    
+\hrule \vspace{8mm}   \hrule \vspace{8mm}
+\hrule \vspace{8mm}   \hrule \vspace{8mm}    
+\hrule \vspace{8mm}   \hrule \vspace{8mm}
+\hrule \vspace{8mm}   \hrule \vspace{8mm}    
+\hrule \vspace{8mm}   \hrule \vspace{8mm}
+\hrule \vspace{8mm}   \hrule \vspace{8mm}
+\hrule \vspace{8mm}   \hrule \vspace{8mm}    
+\hrule \vspace{8mm}   \hrule \vspace{8mm}
+
+
+
+
+
+\end{enumerate}
+
+\newpage
+
+\
+
+\vspace{-20mm}
+
+    
+    \section{Number Theory \& Hill Cipher}
+    
+    \vspace{2mm}
+    \begin{enumerate}
+    
+        \setcounter{enumi}{3}
+        
+\item Is $2^{82589933}-1$ prime?   \ \ \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_	\hfill [0.5]
+
+\
+
+Why? \ \ \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \hfill [0.5]
+
+\item Use Euclid's Algorithm to find \texttt{gcd(422774, 1009)}.
+\ \ \ 
+       [No Partial Marks] \hfill  (1 Mark)
+
+
+\
+
+  \vspace{10mm}
+
+    \hrule
+
+    \vspace{10mm}
+
+    \hrule
+
+    \vspace{10mm}
+
+    \hrule
+
+    \vspace{10mm}
+
+    \hrule
+
+    \vspace{10mm}
+
+  
+
+
+    \item Find the inverse of \texttt{1009 (mod 422774)}. [No Partial Marks] \hfill     (1 Mark)
+
+
+
+  
+    \vspace{10mm}
+
+    \hrule
+
+    \vspace{10mm}
+
+    \hrule
+
+    \vspace{10mm}
+
+    \hrule
+
+    \vspace{10mm}
+
+    \hrule
+
+
+\
+
+	 \item  Find all solutions (between 1 \& 265) to the equation $35x \equiv 15$ (mod 265).         \hfill     [1]
+
+	    \vspace{8mm}  \hrule	    \vspace{8mm}  \hrule	    \vspace{8mm}  \hrule
+	    
+
+\newpage
+
+\
+
+\vspace{-25mm}
+          \item   (Hill-Cipher) Bob sends Alice the following code, in which the Hill-Cipher has been used, modulo 31. The key matrix used is:
+    
+          \vspace{-6mm}
+            
+            \
+            
+             	\[ K = 
+            \left[
+            	\begin{array}{cccccccccc}
+                    5	&	30	& 	23 \\
+                    6	&	30	& 	20 \\
+                    26	&	1	&	9 \\
+            \end{array}
+            \right]
+            \hspace{3mm}
+             \mbox{and The Ciphertext $A$ is:  }
+             \medskip
+            \] 
+          
+          \
+          
+          \vspace{-6mm}
+            
+         \[  
+            \left[
+            \begin{array}{ccccccccccccccc}
+T	&	1	&	H	&	I	&	C	&	O	&	Z	&	F	\\
+F	&	W	&	B	&	T	&	S	&	P	&	B	&	J	\\
+M	&	R	&	2	&	A	&	J	&	X	&	K	&	U	\\
+           \end{array}
+            \right]
+            \]
+            
+                \medskip
+           
+          \hspace{-10mm}   
+             If Bob used the following decimal encoding:
+          
+          \hspace{-10mm}   
+                \begin{tabular}{|l||c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|} \hline
+                  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+                  Letter  & \hspace{0.5mm}  A   \hspace{0.5mm} & \hspace{0.5mm} B \hspace{0.5mm} & \hspace{0.5mm} C \hspace{0.5mm}
+                          & \hspace{0.5mm}  D   \hspace{0.5mm} & \hspace{0.5mm} E \hspace{0.5mm} & \hspace{0.5mm} F \hspace{0.5mm}
+                          & \hspace{0.5mm}  G   \hspace{0.5mm} & \hspace{0.5mm} H \hspace{0.5mm} & \hspace{0.5mm} I \hspace{0.5mm}
+                          & \hspace{0.5mm}  J   \hspace{0.5mm} & \hspace{0.5mm} K \hspace{0.5mm} & \hspace{0.5mm} L \hspace{0.5mm}
+                          & \hspace{0.5mm}  M   \hspace{0.5mm} &  \hspace{0.5mm} N  \hspace{0.5mm}   &  \hspace{0.5mm}   O  \hspace{0.5mm} &  \hspace{0.5mm} P  \hspace{0.5mm} \\ \hline
+                  Code  & 0   &   1   &   2   &   3   &   4   &   5   &   6   &   7   &   8   &   9   &   10  &   11  &   12 & 13  &   14 & 15  \\ \hline \hline
+                  Letter     &   Q   &   R   &   S   &   T   &   U   &   V   &   W   &   X   &   Y   &   Z & 0 & 1& 2& 3 & 4 &  \\ \hline
+                  Code    &   16  &   17  &   18  &   19  &   20  &   21  &   22  &   23  &   24  &   25 & 26 & 27 & 28 & 29 & 30 & \\ \hline
+                \end{tabular}
+    
+            
+             \medskip
+        
+            (a)	Compute the inverse of the matrix $K$ (mod 31).					\hfill     [1]
+
+            
+            
+            
+                \vspace{78mm}
+
+        
+
+        
+            (b)	Find the plaintext M.	(Remember to remove the gibberish \& punctuate it correctly.)	
+                						\hfill       [1]
+            
+            
+                            \vspace{58mm}
+
+\item  $-113$ (mod 10) \ = \ \ \ \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \hfill [1]
+              \medskip
+            
+    
+    		 
+    	\end{enumerate}
+    
+
+
+\end{document}
+

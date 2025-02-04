@@ -1,6 +1,6 @@
-PWD c:\Users\janvr\OneDrive\Documents\School\Winter 2025\CIS4520\Labs\A2
+PWD d:\tyler\School\2025 Winter\Introduction to Cryptography\4520Labs\A2
 INPUT C:\Users\janvr\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT c:\Users\janvr\OneDrive\Documents\School\Winter 2025\CIS4520\Labs\A2\A2.tex
+INPUT d:\tyler\School\2025 Winter\Introduction to Cryptography\4520Labs\A2\A2.tex
 OUTPUT A2.log
 INPUT C:\Users\janvr\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
 INPUT C:\Users\janvr\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
@@ -128,7 +128,6 @@ INPUT C:\Users\janvr\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\sym
 INPUT C:\Users\janvr\AppData\Local\Programs\MiKTeX\fonts\tfm\public\latex-fonts\lasy10.tfm
 INPUT C:\Users\janvr\AppData\Local\Programs\MiKTeX\fonts\tfm\public\latex-fonts\lasy8.tfm
 INPUT C:\Users\janvr\AppData\Local\Programs\MiKTeX\fonts\tfm\public\latex-fonts\lasy6.tfm
-INPUT C:\Users\janvr\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmb7t.tfm
 INPUT C:\Users\janvr\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmb7t.tfm
 INPUT C:\Users\janvr\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr7t.tfm
 INPUT C:\Users\janvr\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmb7t.tfm

@@ -36,7 +36,7 @@
 \
 
 \noindent
-{\bf Name: $\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_$ \hspace{20mm} \hfill 
+{\bf Name: Tyler Janvrin \hspace{20mm} \hfill 
     To be done  in \LaTeX
 }
 
@@ -76,19 +76,66 @@ while another:
 
 \bigskip
 
-\vspace{8mm}
+The first step is to calculate values for the ciphertext and plaintext.
 
-\hrule \vspace{8mm}   \hrule \vspace{8mm}    
-\hrule \vspace{8mm}   \hrule \vspace{8mm}   \hrule 
-\
+\begin{table}[h]
+  \begin{tabular}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|}
+  \hline
+  1 & 2  & 3  & 4  & 5  & 6  & 7  & 8 & 9  & 10 & 11 & 12 & 13 & 14 & 15 & 16 & 17 & 18 & 19 & 20 \\ \hline
+  J & A  & C  & A  & O  & Y  & O  & A & B  & L  & C  & Y  & O  & U  & P  & O  & Y  & T  & B  & N  \\ \hline
+  9 & 0  & 2  & 0  & 14 & 24 & 14 & 0 & 1  & 11 & 2  & 24 & 14 & 20 & 15 & 14 & 24 & 19 & 1  & 13 \\ \hline
+  C & O  & M  & M  & A  & N  & D  & E & R  & I  & N  & C  & H  & I  & E  & F  &    &    &    &    \\ \hline
+  2 & 14 & 12 & 12 & 0  & 13 & 3  & 4 & 17 & 8  & 13 & 2  & 7  & 8  & 4  & 5  &    &    &    &    \\ \hline
+  \end{tabular}
+  \end{table}
+
+Since the one-time pad operates on the text like so: PLAINTEXT + PAD = CIPHERTEXT, we can find the desred plaintext by
+subtracting the plaintext from the ciphertext: PAD = CIPHERTEXT - PLAINTEXT.
+
+\begin{table}[h]
+  \begin{tabular}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|}
+  \hline
+  9 & 0   & 2   & 0   & 14 & 24 & 14 & 0  & 1   & 11 & 2   & 24 & 14 & 20 & 15 & 14 &  &  &  &  \\ \hline
+  M & I   & N   & U   & S  &    &    &    &     &    &     &    &    &    &    &    &  &  &  &  \\ \hline
+  2 & 14  & 12  & 12  & 0  & 13 & 3  & 4  & 17  & 8  & 13  & 2  & 7  & 8  & 4  & 5  &  &  &  &  \\ \hline
+  E & Q   & U   & A   & L  & S  &    &    &     &    &     &    &    &    &    &    &  &  &  &  \\ \hline
+  7 & -14 & -10 & -12 & 14 & 11 & 11 & \# & -16 & 3  & -11 & 22 & 7  & 12 & 11 & 9  &  &  &  &  \\ \hline
+  M & O   & D   & 2   & 5  &    &    &    &     &    &     &    &    &    &    &    &  &  &  &  \\ \hline
+  7 & 12  & 16  & 14  & 14 & 11 & 11 & \# & 10  & 3  & 15  & 22 & 7  & 12 & 11 & 9  &  &  &  &  \\ \hline
+  H & M   & Q   & O   & O  & L  & L  & W  & K   & D  & P   & W  & H  & M  & L  & J  &  &  &  &  \\ \hline
+  \end{tabular}
+  \end{table}
+
+  I did the computations in Excel and copied them over to this document. The final result for the pad that gives this ciphertext is is: HMQOOLLWKDPWHMLJ
+
+  I ignored spaces, which I'm pretty sure is correct. If I hadn't, I would have gotten a slightly different result.
+  \pagebreak
+
 
 \item \texttt{THE SERGEANT AT ARMS}		\hfill [1 mark]
 
-\vspace{12mm}
+The process for this one is exactly the same:
 
-\hrule \vspace{8mm}   \hrule \vspace{8mm}    
-\hrule \vspace{8mm}   \hrule \vspace{8mm}   \hrule 
+\begin{table}[h]
+  \begin{tabular}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|}
+  \hline
+  J    & A  & C  & A   & O  & Y  & O  & A  & B & L  & C   & Y  & O  & U  & P  & O  & Y  \\ \hline
+  9    & 0  & 2  & 0   & 14 & 24 & 14 & 0  & 1 & 11 & 2   & 24 & 14 & 20 & 15 & 14 & 24 \\ \hline
+  T    & H  & E  & S   & E  & R  & G  & E  & A & N  & T   & A  & T  & A  & R  & M  & S  \\ \hline
+  19   & 7  & 4  & 18  & 4  & 17 & 6  & 4  & 0 & 13 & 19  & 0  & 19 & 0  & 17 & 12 & 18 \\ \hline
+       &    &    &     &    &    &    &    &   &    &     &    &    &    &    &    &    \\ \hline
+  9    & 0  & 2  & 0   & 14 & 24 & 14 & 0  & 1 & 11 & 2   & 24 & 14 & 20 & 15 & 14 & 24 \\ \hline
+  M    & I  & N  & U   & S  &    &    &    &   &    &     &    &    &    &    &    &    \\ \hline
+  19   & 7  & 4  & 18  & 4  & 17 & 6  & 4  & 0 & 13 & 19  & 0  & 19 & 0  & 17 & 12 & 18 \\ \hline
+  E    & Q  & U  & A   & L  & S  &    &    &   &    &     &    &    &    &    &    &    \\ \hline
+  \#\# & -7 & -2 & -18 & 10 & 7  & 8  & \# & 1 & -2 & -17 & 24 & -5 & 20 & -2 & 2  & 6  \\ \hline
+  M    & O  & D  & 2   & 5  &    &    &    &   &    &     &    &    &    &    &    &    \\ \hline
+  16   & 19 & 24 & 8   & 10 & 7  & 8  & \# & 1 & 24 & 9   & 24 & 21 & 20 & 24 & 2  & 6  \\ \hline
+  Q    & T  & Y  & I   & K  & H  & I  & W  & B & Y  & J   & Y  & V  & U  & Y  & C  & G  \\ \hline
+  \end{tabular}
+  \end{table}
 
+The final result for the pad that will produce JACAOYOABLCYOUPOYTBN from THE SERGEANT AT ARMS is QTYIKHIWBYJYVUYCG
 
 
 \end{enumerate}

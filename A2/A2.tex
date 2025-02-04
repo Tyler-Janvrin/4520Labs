@@ -190,21 +190,17 @@ WE'RE AWESOME \\  \hline
 \end{center}
 }
 
+When you're using a binary pad, you're using XOR. You go PLAINTEXT xor PAD = CRYPTEXT. XOR inverts the bits in the pad based on the bits in the plaintext, so if you have the message, you can go PLAINTEXT xor CRYPTEXT = PAD to derive the pad. 
 
-\
+Since there were only 12 possibilites for the plaintext, I just brute-forced it, using:
 
+https://www.dcode.fr/xor-cipher to do the xor calculations.
 
-\
+I computed all twelve possible values for the pad for each of the plaintexts (24 total), and then using each possible pad against each plaintext until I encountered a message that made sense (if the message hadn't made sense, it wouldn't have been possible to find the correct pad).
 
-\hrule \vspace{8mm}   \hrule \vspace{8mm}    
-\hrule \vspace{8mm}   \hrule \vspace{8mm}
-\hrule \vspace{8mm}   \hrule \vspace{8mm}    
-\hrule \vspace{8mm}   \hrule \vspace{8mm}
-\hrule \vspace{8mm}   \hrule \vspace{8mm}    
-\hrule \vspace{8mm}   \hrule \vspace{8mm}
-\hrule \vspace{8mm}   \hrule \vspace{8mm}
-\hrule \vspace{8mm}   \hrule \vspace{8mm}    
-\hrule \vspace{8mm}   \hrule \vspace{8mm}
+When I decrypted 0005 1311 1911 1907 0D09 1B08 130B using the pad generated from EMBEZZLED FUNDS xor 0809 0302 0607 1A17 1A08 1C07 141D, I got the phrase MARVELOUS!AZIR. That's clearly not random, so I think I must have found the pad. The pad I got is: 4D44 4147 5C5D 5652 5E28 5A52 5A59 (with possibly some extra characters at the end, because the lengths aren't exactly the same).
+
+\newpage
 
 
 
@@ -226,70 +222,64 @@ WE'RE AWESOME \\  \hline
     
         \setcounter{enumi}{3}
         
-\item Is $2^{82589933}-1$ prime?   \ \ \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_	\hfill [0.5]
+\item Is $2^{82589933}-1$ prime?   \ \  Yes, it is. \hfill [0.5]
 
 \
 
-Why? \ \ \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \hfill [0.5]
+Why? \ \ It was discovered to be prime by GIMPS (Great Internet Mersenne Prime Search) in 2018. At that time, it was the largest known prime. Source: 
+
+https://www.mersenne.org/primes/press/M82589933.html \hfill [0.5]
 
 \item Use Euclid's Algorithm to find \texttt{gcd(422774, 1009)}.
 \ \ \ 
        [No Partial Marks] \hfill  (1 Mark)
+       
+       \
+
+      $gcd(422774, 1009)$ \\
+      Use Euclid's algorithm: \\ 
+      $422774 = 419 * 1009 + 3$ \\
+      $1009 = 336 * 3 + 1$ \\
+
+      Therefore, the GCD of 422774 and 1009 is 3.
 
 
-\
 
-  \vspace{10mm}
 
-    \hrule
 
-    \vspace{10mm}
-
-    \hrule
-
-    \vspace{10mm}
-
-    \hrule
-
-    \vspace{10mm}
-
-    \hrule
-
-    \vspace{10mm}
 
   
 
 
     \item Find the inverse of \texttt{1009 (mod 422774)}. [No Partial Marks] \hfill     (1 Mark)
+    
+    To find this, we can use the Extended Euclidean Algorithm and the results from Q5.
+    
+    $1 = 1009 - 336 * 3$ \\
+    $1 = 1009 - 336 * (422774 - 419 * 1009)$ \\
+    $1 = 1009 - 336 * 422774 +  336 * 419 * 1009$ \\
+    $1 = 1009 - 336 * 422774 +  140784 * 1009$ \\
+    $1 = 140785 * 1009 - 336 * 422774$ \\
+    $1 = 140785 * 1009 (mod\ (422774))$ \\
 
-
-
-  
-    \vspace{10mm}
-
-    \hrule
-
-    \vspace{10mm}
-
-    \hrule
-
-    \vspace{10mm}
-
-    \hrule
-
-    \vspace{10mm}
-
-    \hrule
+    Therefore, the inverse of 1009 (mod 422774) is 140785.
 
 
 \
 
 	 \item  Find all solutions (between 1 \& 265) to the equation $35x \equiv 15$ (mod 265).         \hfill     [1]
+	 
+      $35x = 15 (mod\ 265)$ \\
+      $7x = 3 (mod\ 53)$ \\
+      $38 * 7x = 38 * 3 (mod\ 53)$ 38 is the multiplicative inverse of 7 \\ 
+      $266x = 114 (mod\ 53)$ \\
+      $x = 8 (mod\ 53)$ \\
+      $x = 8, 61, 114, 167, 220,  (mod\ 265)$
+      
 
-	    \vspace{8mm}  \hrule	    \vspace{8mm}  \hrule	    \vspace{8mm}  \hrule
-	    
 
 \newpage
+
 
 \
 

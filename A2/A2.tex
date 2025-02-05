@@ -340,22 +340,154 @@ M	&	R	&	2	&	A	&	J	&	X	&	K	&	U	\\
         
             (a)	Compute the inverse of the matrix $K$ (mod 31).					\hfill     [1]
 
+            $
+            \left[
+            	\begin{array}{ccc|ccc}
+                    5	&	30	& 23 & 1 & 0 & 0 \\
+                    6	&	30	& 20 & 0 & 1 & 0 \\
+                    26 & 1 &	9 & 0 & 0 & 1 \\
+                \end{array}
+            \right]
+            $
+
+            R1 + R3, R2 + R3
+
+            $
+            \left[
+            	\begin{array}{ccc|ccc}
+                    0	&	0	& 1 & 1 & 0 & 1 \\
+                    1	&	0	& -2 & 0 & 1 & 1 \\
+                    26 & 1 &	9 & 0 & 0 & 1 \\
+                \end{array}
+            \right]
+            $
+
+            R2 + 2R1
             
+            $
+            \left[
+            	\begin{array}{ccc|ccc}
+                    0	&	0	& 1 & 1 & 0 & 1 \\
+                    1	&	0	& 0 & 2 & 1 & 3 \\
+                    26 & 1 &	9 & 0 & 0 & 1 \\
+                \end{array}
+            \right]
+            $
+
+            R3 + 5R@
             
+            $
+            \left[
+            	\begin{array}{ccc|ccc}
+                    0	&	0	& 1 & 1 & 0 & 1 \\
+                    1	&	0	& 0 & 2 & 1 & 3 \\
+                    0 & 1 &	9 & 10 & 5 & 16 \\
+                \end{array}
+            \right]
+            $
+
+            R3 - 9R1
+
+            $
+            \left[
+            	\begin{array}{ccc|ccc}
+                    0	&	0	& 1 & 1 & 0 & 1 \\
+                    1	&	0	& 0 & 2 & 1 & 3 \\
+                    0 & 1 &	0 & 1 & 5 & 7 \\
+                \end{array}
+            \right]
+            $
+
+            Rearrange:
+
+            $
+            \left[
+            	\begin{array}{ccc|ccc}
+                    1	&	0	& 0 & 2 & 1 & 3 \\
+                    0 & 1 &	0 & 1 & 5 & 7 \\
+                    0	&	0	& 1 & 1 & 0 & 1 \\
+                \end{array}
+            \right]
+            $
             
-                \vspace{78mm}
+                \pagebreak
+
+            
+
+            
+      
 
         
 
         
             (b)	Find the plaintext M.	(Remember to remove the gibberish \& punctuate it correctly.)	
                 						\hfill       [1]
-            
-            
-                            \vspace{58mm}
 
-\item  $-113$ (mod 10) \ = \ \ \ \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \hfill [1]
-              \medskip
+            First, we convert the letters in the matrix to their corresponding numbers:
+            
+            $
+            \left[
+            \begin{array}{cccccccc}
+              19	&	27 &	7  &	8  &	2	&	14	&	25	&	5	\\
+              5 	&	22 &	1  &	19 &	18	&	15	&	1	&	9	\\
+              12	&	17	&	28	&	0	&	9	&	23	&	10	&	20	\\
+           \end{array}
+            \right]
+            $
+
+            Then, we multiply this matrix by the inverse of K:
+            $
+            \left[
+            	\begin{array}{ccc}
+                    2 & 1 & 3 \\
+                    1 & 5 & 7 \\
+                    1 & 0 & 1 \\
+                \end{array}
+            \right]
+            $
+
+            Yielding:
+
+            $
+            \left[
+            \begin{array}{cccccccc}
+              79	&	127 &	99  &	35  &	49	&	112 &	81	&	79	\\
+              128 &	256 &	208  &	103 &	155	&	250	&	100	&	190	\\
+              31	&	44	&	35	&	8	&	11	&	37	&	35	&	25	\\
+           \end{array}
+            \right]
+            $
+
+            Taking the mod of this, we get:
+
+            $
+            \left[
+            \begin{array}{cccccccc}
+              17	&	3 &	6  &	4  &	18	&	19 &	19	&	17	\\
+              4 &	8 &	22  &	10 &	0	&	2	&	7	&	4	\\
+              0	&	13	&	4	&	8	&	11	&	6	&	4	&	25	\\
+           \end{array}
+            \right]
+            $
+
+            Now, finally, we swap the letters out for the numbers:
+
+            $
+            \left[
+            \begin{array}{cccccccc}
+              R	&	D &	G  &	E  &	S	&	T &	T	&	R	\\
+              E &	I &	W  &	K &	A	&	C	&	H	&	E	\\
+              A	&	N	&	E	&	  I	&	L	&	G	&	E	&	Z	\\
+           \end{array}
+            \right]
+            $
+
+            That reads: Reading week is the rez.
+
+
+\item  $-113$ (mod 10) \ = 7 \hfill [1]
+
+      Proof: $-113 = -12 * 10 + 7$
             
     
     		 
